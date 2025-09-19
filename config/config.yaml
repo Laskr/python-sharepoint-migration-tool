@@ -1,0 +1,23 @@
+# config/config.yaml
+
+# Performance and resilience tuning for the SharePoint client
+performance:
+  max_connections: 5
+  max_retries: 5
+  retry_delay_seconds: 2
+  # Number of folders to copy in a single concurrent batch
+  batch_size: 5
+  # Delay between batches in seconds
+  post_processing_wait_time: 60 # Time to wait after all copy jobs are initiated to allow server-side processing to complete
+
+# Configuration for the migration logic
+migration:
+  # Behavior for existing folders: 'fail', 'replace', or 'rename'
+  conflict_behavior: "replace"
+  # List of case-insensitive keywords to filter source folders by
+  migration_keywords:
+      - "example keyword" # Replace with actual lowercase keywords
+
+paths:
+  source_root: "replace/withyourpath" # Replace with actual source root path if path was Documents/General/Clients then enter General/Clients
+  destination_root: "replace/withyourpath" # Replace with actual destination root path if path was Documents/General/Clients then enter General/Clients
