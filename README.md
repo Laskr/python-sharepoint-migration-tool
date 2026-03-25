@@ -1,5 +1,3 @@
-# README.md
-
 ## SharePoint Cross-Site Migration Utility
 
 This is an enterprise-grade Python utility for performing a large-scale, targeted migration of folders and their contents between two separate SharePoint Online sites.
